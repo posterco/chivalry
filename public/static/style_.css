@@ -1,0 +1,27 @@
+.btn-add{
+    position: absolute;
+    right: 40px;
+    border-radius: 10px;
+    background-color: white;
+    padding: 0;
+    height: 27px;
+    width: 27px;
+}
+
+button:hover{
+    background-color: rgb(237, 219, 219);
+}
+
+.list-class-grp-add{
+    display: flex;
+    align-items: center;
+}
+
+body{
+    color: black;
+    background-color: black;
+}
+
+.img{
+    object-fit: cover;
+}

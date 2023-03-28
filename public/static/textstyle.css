@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Bayon&family=Kanit:wght@300&family=Koulen&family=Poppins:wght@500&family=Roboto+Slab:wght@200&family=Secular+One&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+h2{
+    position: relative;
+    font-size: 14vw;
+    color: #252839;
+    -webkit-text-stroke: 0.3vw #01fe87;
+}
+
+h2::before{
+
+    content: attr(data-text);
+    position: absolute;
+    /* padding: 4px; */
+    
+    top:0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    color: #01fe87;
+    -webkit-text-stroke: 0vw #01fe87;
+    border-right: 2px solid #01fe87;
+    overflow: hidden;
+    animation: animate 2s linear forwards;
+    
+}
+
+@keyframes animate{ 
+    0%,10%,20%{
+        width: 0;
+
+    }
+
+    100%{
+        width: 100%;
+    }
+
+}
