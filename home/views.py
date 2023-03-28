@@ -9,3 +9,6 @@ def landing_page(request):
 def goals(request):
     context  = {'category' : Category.objects.filter() , 'goals': Goals.objects.filter()}
     return render(request,'goals.html' , context)
+
+def guide(request):
+    return render(request,'guide.html')
