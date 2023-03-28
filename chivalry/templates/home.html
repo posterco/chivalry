@@ -1,0 +1,31 @@
+{% extends 'base/base.html'%}
+
+{% block start %}
+<div class="container-fluid " style="position:absolute; top:70px">
+    {% include "base/alert.html" %}
+      <div class="row">
+          <div class="col-md-12 mb-4">
+            <div class="card mb-4">
+              <div class="card-header py-3">
+                <h5 class="mb-0">Your Goals For Today</h5>
+              </div>
+              <div class="card-body">
+                  <div class="card" style="width:65vw;">
+                      <ul class="list-group">
+                        {% for category in category%}
+                          <li class="list-group-item "><b> {{category.category_name}} </b></li>
+                          {% for goal in goals %}
+                          {% if goal.goal_category == category %}
+                        <li class="list-group-item list-class-grp-add " style="display:flex; align-items:center;" >{{goal.goal_name}}<button style="position:absolute; right:50px; border-radius:15px; padding:5px; margin:5px; text-align:center;font-size:0.8rem">Guide</button><a class="btn"style="position:absolute; right:20px; cursor:pointer"> &#10003;</a></li>
+                        {% endif  %}
+                        {% endfor %}
+                      </ul>
+                      {% endfor %}
+                  </div>
+                  <div class="card">
+                    {{cal|safe}}
+                  <br>
+          </div>
+      </body>
+
+{% endblock %}
